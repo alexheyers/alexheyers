@@ -8,7 +8,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexander-heyers-006215339/)
 [![Website](https://img.shields.io/badge/deinebusinesspage.de-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.deinebusinesspage.de)
-[![Voice Agent](https://img.shields.io/badge/meinvoiceagent.de-6C3FC5?style=for-the-badge&logo=twilio&logoColor=white)](https://www.meinvoiceagent.de)
+[![AI Adoption Studio](https://img.shields.io/badge/AI--Adoption--Studio-6C3FC5?style=for-the-badge&logo=anthropic&logoColor=white)](https://github.com/alexheyers/ai-adoption-studio)
 [![Portfolio](https://img.shields.io/badge/myflowmotion.cloud-FF6B35?style=for-the-badge&logo=vercel&logoColor=white)](https://myflowmotion.cloud)
 
 </div>
@@ -21,7 +21,7 @@ Ich bin kein klassischer Developer — und genau das ist mein Vorteil.
 
 20 Jahre habe ich Bars, Hotels und Teams geführt. Ich habe gelernt, wie echte Geschäftsprozesse funktionieren, wo die Reibungsverluste liegen und was Menschen wirklich brauchen. Dann habe ich diese Erfahrung mit KI und modernen Tools kombiniert.
 
-Heute baue ich als **Vibe Coder** komplette digitale Produkte: von Spectacular Homepages über KI-Telefonassistenten bis zu Full-Stack-Apps mit Echtzeit-Features. Nicht als Spielerei, sondern als funktionierende Produkte mit echten Nutzern.
+Heute baue ich als **Vibe Coder** komplette digitale Produkte: von Spectacular Homepages über KI-Beratungssysteme bis zu Full-Stack-Apps mit Echtzeit-Features. Nicht als Spielerei, sondern als funktionierende Produkte mit echten Nutzern.
 
 > *"Wie im Kleinen, so im Großen — alles 100%, alles Portfolio-Qualität."*
 
@@ -43,12 +43,12 @@ Spectacular Homepages mit Three.js + GSAP, KI-gestützte Automatisierungen für 
 </td>
 <td width="50%" valign="top">
 
-### 📞 meinvoiceagent.de
-**KI-Telefonassistenten für den DACH-Markt**
+### 🤖 AI-Adoption-Studio
+**Multi-Agent-System für KI-Beratung im Mittelstand**
 
-KI-gestützte Voice Agents, die Anrufe automatisch entgegennehmen, Termine buchen und Kunden qualifizieren. 24/7-Erreichbarkeit — ohne Warteschleife, ohne verpasste Leads.
+KI-gestütztes Beratungssystem für den Hospitality-Mittelstand: Voice-Interview mit Ada (ElevenLabs), 8 parallele Claude-Agents, automatisiertes PPTX/Excel-Reporting. Bootcamp-Projekt · Final-Pitch 21.07.2026.
 
-🔗 [www.meinvoiceagent.de](https://www.meinvoiceagent.de)
+🔗 [GitHub Repo](https://github.com/alexheyers/ai-adoption-studio)
 
 </td>
 </tr>
@@ -100,7 +100,7 @@ KI-gestütztes Betriebssystem für Bars und Restaurants. Inventur, Kostenkontrol
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
 ![Make](https://img.shields.io/badge/Make-6D00CC?style=flat-square&logo=make&logoColor=white)
 ![ElevenLabs](https://img.shields.io/badge/ElevenLabs-000000?style=flat-square&logoColor=white)
-![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 
 **Infrastruktur & DevOps**
 
@@ -155,7 +155,7 @@ Ich bin offen für spannende Projekte, Kollaborationen und den Austausch mit and
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/alexander-heyers-006215339/)
 - 🌐 [deinebusinesspage.de](https://www.deinebusinesspage.de)
-- 📞 [meinvoiceagent.de](https://www.meinvoiceagent.de)
+- 🤖 [AI-Adoption-Studio](https://github.com/alexheyers/ai-adoption-studio)
 - 🎨 [myflowmotion.cloud](https://myflowmotion.cloud)
 - 📧 hallo@deinebusinesspage.de
 
