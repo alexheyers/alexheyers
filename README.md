@@ -2,7 +2,7 @@
 
 # Hey, ich bin Alex 👋
 
-### Vibe Coder & AI Automation Architect
+### Vibe Coding & AI Automation 
 
 **20 Jahre Hospitality. Dann kam KI. Jetzt baue ich digitale Produkte — von der Idee bis zum Deploy.**
 
