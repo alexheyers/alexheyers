@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MIT KI & Agentic Coding — Präsentation</title>
+<style>
+  :root{
+    --bg:#1a1b26;--surface:#24283b;--surface2:#1f2335;--border:#2f3549;--text:#c0caf5;--muted:#7884b3;
+    --blue:#7aa2f7;--cyan:#7dcfff;--green:#9ece6a;--purple:#bb9af7;--orange:#ff9e64;--red:#f7768e;--yellow:#e0af68;--pink:#ff75a0;--brown:#cfa98a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);overflow:hidden;
+    background:radial-gradient(1200px 700px at 80% -10%,rgba(122,162,247,.14),transparent 60%),
+               radial-gradient(900px 600px at -10% 110%,rgba(187,154,247,.14),transparent 55%),var(--bg);
+  }
+  .deck{height:100vh;width:100vw;position:relative}
+  .slide{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+    padding:6vh 9vw;opacity:0;transform:translateY(24px);pointer-events:none;transition:opacity .45s,transform .45s;overflow:auto;
+  }
+  .slide.active{opacity:1;transform:none;pointer-events:auto}
+  .kicker{font-size:14px;letter-spacing:3px;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:14px}
+  h1{font-size:clamp(34px,6vw,68px);line-height:1.05;letter-spacing:-1px;margin-bottom:18px}
+  h2{font-size:clamp(26px,4vw,46px);line-height:1.1;letter-spacing:-.5px;margin-bottom:22px}
+  .grad{background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lead{font-size:clamp(17px,2.1vw,23px);color:var(--muted);max-width:60ch;line-height:1.5}
+  ul.big{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:10px}
+  ul.big li{font-size:clamp(16px,2vw,22px);display:flex;gap:14px;align-items:flex-start}
+  ul.big li .b{color:var(--blue);font-weight:800}
+  .stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 26px;min-width:150px}
+  .stat b{display:block;font-size:clamp(28px,4vw,44px);background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat span{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+  .phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:24px}
+  .phase{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent,var(--blue));border-radius:14px;padding:18px 20px}
+  .phase h3{font-size:19px;margin-bottom:6px}
+  .phase p{color:var(--muted);font-size:14px}
+  .phase .w{font-size:12px;color:var(--accent,var(--blue));font-weight:700;letter-spacing:1px;text-transform:uppercase}
+  .cat-head{display:flex;align-items:center;gap:18px;margin-bottom:8px}
+  .cat-ico{font-size:clamp(40px,6vw,64px)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+  .mini{background:var(--surface);border:1px solid var(--border);border-radius:13px;padding:15px 17px;border-top:3px solid var(--accent,var(--blue))}
+  .mini h4{font-size:16px;display:flex;gap:9px;align-items:center;margin-bottom:5px}
+  .mini .kurs{font-size:12px;color:var(--cyan);margin-bottom:7px}
+  .mini p{font-size:13px;color:var(--muted);line-height:1.45}
+  .mini .lvl{font-size:11px;padding:2px 8px;border-radius:999px;margin-left:auto;font-weight:600}
+  .lvl.Grundlagen{background:rgba(158,206,106,.16);color:var(--green)}
+  .lvl.Mittel{background:rgba(224,175,104,.16);color:var(--yellow)}
+  .lvl.Fortgeschritten{background:rgba(247,118,142,.16);color:var(--red)}
+  table.plan{width:100%;border-collapse:collapse;margin-top:18px;font-size:clamp(13px,1.6vw,17px)}
+  table.plan th,table.plan td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--border)}
+  table.plan th{color:var(--purple);text-transform:uppercase;font-size:12px;letter-spacing:1px}
+  table.plan td:first-child{font-weight:800;color:var(--blue)}
+  .pill{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;background:var(--surface2);border:1px solid var(--border);color:var(--muted)}
+  .src-list{columns:2;gap:30px;margin-top:18px}
+  .src-list a{color:var(--blue);text-decoration:none;display:block;padding:7px 0;font-size:15px}
+  .src-list a:hover{text-decoration:underline}
+  /* chrome */
+  .progress{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));z-index:20;transition:width .3s}
+  .hud{position:fixed;bottom:18px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:18px;z-index:20}
+  .dots{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;max-width:70vw}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--border);border:0;cursor:pointer;padding:0}
+  .dot.active{background:var(--blue);transform:scale(1.3)}
+  .nav{position:fixed;bottom:14px;right:20px;display:flex;gap:8px;z-index:20}
+  .nav button,.counter{background:var(--surface);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:8px 12px;font-size:14px;cursor:pointer}
+  .counter{cursor:default;color:var(--muted)}
+  .hint{position:fixed;bottom:16px;left:20px;color:var(--muted);font-size:12px;z-index:20}
+  @media(max-width:640px){.slide{padding:7vh 6vw}.src-list{columns:1}.hint{display:none}}
+</style>
+</head>
+<body>
+  <div class="progress" id="prog"></div>
+  <div class="deck" id="deck"></div>
+  <div class="hud"><div class="dots" id="dots"></div></div>
+  <div class="hint">← → / Leertaste · F = Vollbild</div>
+  <div class="nav">
+    <button id="prev">←</button>
+    <span class="counter"><span id="cur">1</span> / <span id="tot">1</span></span>
+    <button id="next">→</button>
+  </div>
+
+  <script src="curriculum.js"></script>
+  <script>
+  (function(){
+    const D = window.CURRICULUM, F = D.fields;
+    const CAT_COLOR = {
+      "Mathematik-Grundlagen":"#7aa2f7","Programmierung & CS":"#9ece6a","Künstliche Intelligenz":"#bb9af7",
+      "Machine Learning":"#ff9e64","Deep Learning":"#f7768e","NLP & LLMs":"#ff75a0","Agentic AI":"#e0af68","Prompt Engineering":"#cfa98a"
+    };
+    const CAT_ICON = {
+      "Mathematik-Grundlagen":"📐","Programmierung & CS":"💾","Künstliche Intelligenz":"🧠",
+      "Machine Learning":"📊","Deep Learning":"🔥","NLP & LLMs":"💬","Agentic AI":"🤖","Prompt Engineering":"🎯"
+    };
+    const esc = s => String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+    const totalH = F.reduce((a,f)=>a+f.aufwand,0);
+    const cats = [...new Set(F.map(f=>f.kategorie))];
+
+    const slides = [];
+
+    // 1 — Title
+    slides.push(`
+      <div class="kicker">MIT OpenCourseWare · kostenlos & offen</div>
+      <h1>Künstliche Intelligenz<br>& <span class="grad">Agentic Coding</span></h1>
+      <p class="lead">Ein kuratierter Lernpfad aus dem frei verfügbaren Wissen des MIT —
+      vom mathematischen Fundament bis zum eigenen Multi-Agent-System.</p>
+      <div class="stats">
+        <div class="stat"><b>${F.length}</b><span>Lernfelder</span></div>
+        <div class="stat"><b>${cats.length}</b><span>Kategorien</span></div>
+        <div class="stat"><b>${totalH} h</b><span>Lernzeit</span></div>
+        <div class="stat"><b>${D.meta.weeks}</b><span>Wochen-Plan</span></div>
+      </div>`);
+
+    // 2 — Why MIT
+    slides.push(`
+      <div class="kicker">Warum MIT?</div>
+      <h2>Eliten-Wissen. <span class="grad">Null Euro.</span></h2>
+      <ul class="big">
+        <li><span class="b">→</span><div>Das MIT veröffentlicht über <b>OpenCourseWare</b> praktisch sein gesamtes Lehrmaterial — Videos, Skripte, Aufgaben.</div></li>
+        <li><span class="b">→</span><div>Dieselben Kurse, die MIT-Studierende belegen — <b>frei zugänglich</b>, in deinem Tempo.</div></li>
+        <li><span class="b">→</span><div>Gelehrt von Legenden: <b>Gilbert Strang</b> (Lineare Algebra), <b>Patrick Winston</b> (KI), <b>Song Han</b> (Efficient AI).</div></li>
+        <li><span class="b">→</span><div>Hier kuratiert auf das, was <b>Vibe Coding & KI-Produkte</b> wirklich brauchen.</div></li>
+      </ul>`);
+
+    // 3 — 4 phases
+    const PHASES = [
+      {name:"Fundament",w:"Woche 1–4",c:"#7aa2f7",d:"Tooling, Python, Mathe & Algorithmen — die Basis, auf der alles steht."},
+      {name:"KI & Machine Learning",w:"Woche 5–6",c:"#ff9e64",d:"Wie Maschinen denken und aus Daten lernen."},
+      {name:"Deep Learning & Sprache",w:"Woche 7–8",c:"#f7768e",d:"Neuronale Netze, Transformer und große Sprachmodelle."},
+      {name:"Agentic AI & Capstone",w:"Woche 9–12",c:"#e0af68",d:"Prompting, RAG, Agenten & Multi-Agent-Systeme — bis zum eigenen Produkt."},
+    ];
+    slides.push(`
+      <div class="kicker">Der Weg</div>
+      <h2>4 Phasen, ein roter Faden</h2>
+      <div class="phases">
+        ${PHASES.map(p=>`<div class="phase" style="--accent:${p.c}">
+          <div class="w">${p.w}</div><h3>${p.name}</h3><p>${p.d}</p></div>`).join("")}
+      </div>`);
+
+    // 4..n — one slide per category
+    cats.forEach(cat=>{
+      const items = F.filter(f=>f.kategorie===cat).sort((a,b)=>a.woche-b.woche);
+      const col = CAT_COLOR[cat], h = items.reduce((a,f)=>a+f.aufwand,0);
+      slides.push(`
+        <div class="cat-head">
+          <div class="cat-ico">${CAT_ICON[cat]||"📘"}</div>
+          <div><div class="kicker" style="color:${col};margin-bottom:4px">Kategorie · ${items.length} Felder · ${h} h</div>
+          <h2 style="margin:0">${esc(cat)}</h2></div>
+        </div>
+        <div class="cards">
+          ${items.map(f=>`<div class="mini" style="--accent:${col}">
+            <h4>${f.icon} ${esc(f.lernfeld)} <span class="lvl ${f.level}">${f.level}</span></h4>
+            <div class="kurs">${esc(f.kurs)}</div>
+            <p>${esc(f.summary)}</p>
+          </div>`).join("")}
+        </div>`);
+    });
+
+    // n+1 — 12-week plan
+    const planRows = [
+      [1,"Shell, Git & Dev-Tooling","Missing Semester","M2","12"],
+      [2,"Python & Informatik-Grundlagen","6.0001 / 6.0002","M2","30"],
+      [3,"Lineare Algebra","18.06 (Strang)","M2","30"],
+      [4,"Algorithmen + Matrix Methods","6.006 / 18.065","M2","24"],
+      [5,"Künstliche Intelligenz","6.034 (Winston)","M1","36"],
+      [6,"Machine Learning","6.036","M3","36"],
+      [7,"Deep Learning","6.S191","M3","20"],
+      [8,"NLP & Large Language Models","6.864 + 6.S191","M3","24"],
+      [9,"Prompt Engineering + RAG","Kuratiert","M3/M4","18"],
+      [10,"AI Agents + Tool Use + Claude Code","Kuratiert","M5","26"],
+      [11,"Multi-Agent + Efficient AI","6.5940 + Praxis","M5","30"],
+      [12,"Capstone + Vertiefung","9.520 / 6.S897","M5","20"],
+    ];
+    slides.push(`
+      <div class="kicker">Teilzeit · ~8–12 h / Woche</div>
+      <h2>Der 12-Wochen-Lernplan</h2>
+      <table class="plan">
+        <tr><th>W</th><th>Fokus</th><th>MIT-Quelle</th><th>Modul</th><th>≈ h</th></tr>
+        ${planRows.map(r=>`<tr><td>${r[0]}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td><span class="pill">${r[3]}</span></td><td>${r[4]}</td></tr>`).join("")}
+      </table>`);
+
+    // n+2 — Agentic AI spotlight / Capstone
+    slides.push(`
+      <div class="kicker" style="color:var(--yellow)">Das Ziel</div>
+      <h2>🤖 Vom Wissen zum <span class="grad">eigenen Agenten-System</span></h2>
+      <ul class="big">
+        <li><span class="b">①</span><div><b>Agenten</b> verstehen: ReAct, Planung, Reflexion, Gedächtnis.</div></li>
+        <li><span class="b">②</span><div><b>Tool Use & MCP</b>: Agenten an Supabase, n8n & APIs anbinden.</div></li>
+        <li><span class="b">③</span><div><b>Multi-Agent-Orchestrierung</b>: Orchestrator-Worker, parallele Agenten.</div></li>
+        <li><span class="b">★</span><div><b>Capstone:</b> ein Multi-Agent-Feature für das <b>AI-Adoption-Studio</b> — Final-Pitch 21.07.2026.</div></li>
+      </ul>`);
+
+    // n+3 — How to learn
+    slides.push(`
+      <div class="kicker">So lernst du</div>
+      <h2>Zwei Werkzeuge, ein System</h2>
+      <div class="phases">
+        <div class="phase" style="--accent:#7aa2f7"><h3>📚 MIT Lernhub</h3>
+          <p>Interaktive Oberfläche mit Fortschritts-Tracking, Filtern & 12-Wochen-Plan. Läuft im Browser, offline-fähig.</p></div>
+        <div class="phase" style="--accent:#bb9af7"><h3>🗂 Notion-Datenbank</h3>
+          <p>Dieselben 19 Lernfelder im Vibe Coding Bootcamp Workspace — mit Board-, Wochen- & Status-Ansichten.</p></div>
+        <div class="phase" style="--accent:#9ece6a"><h3>✅ Definition of Done</h3>
+          <p>Pro Woche: Thema durcharbeiten · 1 Hands-on-Artefakt · Status setzen · 1 Learning für LinkedIn notieren.</p></div>
+      </div>`);
+
+    // n+4 — sources / thanks
+    slides.push(`
+      <div class="kicker">Quellen — alle kostenlos</div>
+      <h2>Lern weiter. <span class="grad">Bau Echtes.</span></h2>
+      <div class="src-list">
+        <a href="https://ocw.mit.edu/" target="_blank" rel="noopener">↗ MIT OpenCourseWare</a>
+        <a href="https://introtodeeplearning.com/" target="_blank" rel="noopener">↗ MIT 6.S191 — Deep Learning</a>
+        <a href="https://hanlab.mit.edu/courses/2024-fall-65940" target="_blank" rel="noopener">↗ MIT 6.5940 — Efficient AI</a>
+        <a href="https://openlearninglibrary.mit.edu/" target="_blank" rel="noopener">↗ MIT Open Learning Library</a>
+        <a href="https://missing.csail.mit.edu/" target="_blank" rel="noopener">↗ The Missing Semester</a>
+        <a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/" target="_blank" rel="noopener">↗ MIT 6.034 — Artificial Intelligence</a>
+      </div>
+      <p class="lead" style="margin-top:26px">Built with ☕, 🎵 and a lot of Claude · Teil des Vibe Coding Bootcamps</p>`);
+
+    // ---- render ----
+    const deck = document.getElementById("deck"), dots = document.getElementById("dots");
+    slides.forEach((html,i)=>{
+      const s = document.createElement("section");
+      s.className = "slide" + (i===0?" active":"");
+      s.innerHTML = html;
+      deck.appendChild(s);
+      const d = document.createElement("button");
+      d.className = "dot" + (i===0?" active":"");
+      d.onclick = ()=>go(i);
+      dots.appendChild(d);
+    });
+    const els = [...document.querySelectorAll(".slide")];
+    const dotEls = [...document.querySelectorAll(".dot")];
+    document.getElementById("tot").textContent = slides.length;
+    let cur = 0;
+    function go(n){
+      cur = Math.max(0, Math.min(slides.length-1, n));
+      els.forEach((e,i)=>e.classList.toggle("active",i===cur));
+      dotEls.forEach((e,i)=>e.classList.toggle("active",i===cur));
+      document.getElementById("cur").textContent = cur+1;
+      document.getElementById("prog").style.width = ((cur+1)/slides.length*100)+"%";
+    }
+    document.getElementById("next").onclick = ()=>go(cur+1);
+    document.getElementById("prev").onclick = ()=>go(cur-1);
+    document.addEventListener("keydown",e=>{
+      if(["ArrowRight","ArrowDown"," ","PageDown"].includes(e.key)){e.preventDefault();go(cur+1);}
+      else if(["ArrowLeft","ArrowUp","PageUp"].includes(e.key)){e.preventDefault();go(cur-1);}
+      else if(e.key==="Home")go(0); else if(e.key==="End")go(slides.length-1);
+      else if(e.key.toLowerCase()==="f"){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}
+    });
+    let sx=null;
+    deck.addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
+    deck.addEventListener("touchend",e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(cur+(dx<0?1:-1));sx=null;},{passive:true});
+    go(0);
+  })();
+  </script>
+</body>
+</html>
