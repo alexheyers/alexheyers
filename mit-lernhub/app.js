@@ -97,12 +97,14 @@
     const seg = ["todo", "in-progress", "done"].map((s) =>
       `<button data-s="${s}" class="${st === s ? "on" : ""}" title="${STATUS_LABEL[s]}">${STATUS_LABEL[s]}</button>`
     ).join("");
+    const res = [{ l: "🏠 Kurs-Startseite", u: f.quelle }, ...(f.resources || [])]
+      .map((r) => `<a class="res" href="${r.u}" target="_blank" rel="noopener">${esc(r.l)}</a>`).join("");
     return `
-      <div class="card ${st === "done" ? "done" : ""}" data-id="${f.id}" style="--accent:${CAT_COLOR[f.kategorie] || "#7aa2f7"}">
+      <div class="card ${st === "done" ? "done" : ""}" data-id="${f.id}" data-url="${f.quelle}" style="--accent:${CAT_COLOR[f.kategorie] || "#7aa2f7"}">
         <div class="card-top">
           <div class="card-ico">${f.icon}</div>
           <div style="flex:1">
-            <h3>${esc(f.lernfeld)}</h3>
+            <h3><a href="${f.quelle}" target="_blank" rel="noopener">${esc(f.lernfeld)} ↗</a></h3>
             <p class="card-kurs">${esc(f.kurs)}</p>
           </div>
           <span class="badge lvl-${f.level}">${f.level}</span>
@@ -116,9 +118,10 @@
           <span class="tag">📅 Woche ${f.woche}</span>
           <span class="tag">⏱ ${f.aufwand} h</span>
         </div>
+        <div class="resources" title="Lernmaterial öffnen">${res}</div>
         <div class="card-foot">
+          <span class="foot-label">Status:</span>
           <div class="seg" data-id="${f.id}">${seg}</div>
-          <a class="src" href="${f.quelle}" target="_blank" rel="noopener">Quelle öffnen ↗</a>
         </div>
       </div>`;
   }
@@ -130,7 +133,14 @@
     grid.innerHTML = list.map(cardHTML).join("");
     grid.querySelectorAll(".seg").forEach((seg) => {
       seg.querySelectorAll("button").forEach((btn) => {
-        btn.onclick = () => setStatus(seg.dataset.id, btn.dataset.s);
+        btn.onclick = (e) => { e.stopPropagation(); setStatus(seg.dataset.id, btn.dataset.s); };
+      });
+    });
+    // Klick irgendwo auf die Karte (außer auf Links/Buttons) öffnet die Kursseite
+    grid.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        if (e.target.closest("a, button")) return;
+        window.open(card.dataset.url, "_blank", "noopener");
       });
     });
   }
