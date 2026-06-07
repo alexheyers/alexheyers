@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIT Lernhub — KI &amp; Agentic Coding</title>
+  <meta name="description" content="Interaktive Lern-Oberfläche für kostenloses MIT-Wissen rund um KI, Machine Learning, Deep Learning und Agentic Coding." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+</head>
+<body>
+  <header>
+    <div class="head-inner">
+      <div class="brand">
+        <div class="logo">🎓</div>
+        <div>
+          <h1><span class="grad">MIT Lernhub</span></h1>
+          <p>KI &amp; Agentic Coding — kostenloses MIT-Wissen, strukturiert</p>
+        </div>
+      </div>
+      <div class="head-stats">
+        <div class="ring" title="Fortschritt nach Lernstunden">
+          <svg width="64" height="64">
+            <circle cx="32" cy="32" r="27" fill="none" stroke="#2f3549" stroke-width="7"></circle>
+            <circle id="ringFill" cx="32" cy="32" r="27" fill="none" stroke="url(#g)" stroke-width="7"
+              stroke-linecap="round" stroke-dasharray="169.6" stroke-dashoffset="169.6"></circle>
+            <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#7aa2f7"/><stop offset="100%" stop-color="#bb9af7"/>
+            </linearGradient></defs>
+          </svg>
+          <div class="pct" id="ringPct">0%</div>
+        </div>
+        <div class="stat"><b id="statDone">0/20</b><span>Felder erledigt</span></div>
+        <div class="stat"><b id="statHours">0 h</b><span>von <span id="statTotal">0</span> h</span></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="tabs">
+        <button class="tab active" data-view="fields">📚 Lernfelder</button>
+        <button class="tab" data-view="plan">🗺️ 12-Wochen-Plan</button>
+        <button class="tab" data-view="about">ℹ️ Über</button>
+        <a class="tab" href="praesentation.html" style="text-decoration:none">🎤 Präsentation</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- LERNFELDER -->
+    <section id="view-fields">
+      <div class="filters">
+        <input class="search" id="search" type="search" placeholder="🔍 Lernfeld, MIT-Kurs oder Thema suchen…" />
+      </div>
+      <div class="filters">
+        <span class="filter-label">Kategorie</span>
+        <div class="chips" id="catChips"></div>
+      </div>
+      <div class="filters">
+        <span class="filter-label">Level</span>
+        <div class="chips" id="lvlChips"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- PLAN -->
+    <section id="view-plan" class="hidden">
+      <div class="plan" id="plan"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="view-about" class="hidden">
+      <div class="about">
+        <div class="card" style="--accent:#bb9af7">
+          <h2>Über diesen Lernhub</h2>
+          <p>Das MIT stellt praktisch sein gesamtes Lehrmaterial kostenlos online (MIT OpenCourseWare &amp;
+          Open Learning Library). Dieser Hub bündelt die für <b>Vibe Coding &amp; KI</b> relevantesten Kurse zu
+          <b>19 Lernfeldern</b> — von Python &amp; linearer Algebra über Deep Learning bis zu Agentic AI — und
+          mappt sie auf die 5 Module des Vibe Coding Bootcamps.</p>
+          <p><b>Fortschritt</b> wird lokal in deinem Browser gespeichert (localStorage) — nichts verlässt dein Gerät.
+          Dieselben Lernfelder liegen zusätzlich als Notion-Datenbank im <i>Vibe Coding Bootcamp</i> Workspace,
+          inklusive Board-, Wochen- und Status-Ansichten.</p>
+          <p><b>Quellen:</b> MIT OpenCourseWare (ocw.mit.edu), MIT 6.S191 (introtodeeplearning.com),
+          MIT HAN Lab 6.5940 sowie kuratierte Praxis-Ressourcen für Prompt Engineering &amp; Agentic Coding.</p>
+          <a class="cta" id="notionLink" href="#" target="_blank" rel="noopener">→ Zur Notion-Datenbank</a>
+          &nbsp;
+          <a class="cta" id="planLink" href="#" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#9ece6a,#7dcfff)">→ 12-Wochen-Plan in Notion</a>
+          <p style="margin-top:18px;color:var(--muted-2);font-size:12.5px">Tipp: „Alles zurücksetzen“ löscht deinen gespeicherten Fortschritt.
+          <button id="resetBtn" style="background:none;border:1px solid var(--border);color:var(--red);padding:4px 10px;border-radius:8px;cursor:pointer;margin-left:6px">Alles zurücksetzen</button></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    Built with ☕, 🎵 and a lot of Claude · Daten aus MIT OpenCourseWare (kostenlos &amp; offen) · Fortschritt bleibt lokal im Browser
+  </footer>
+
+  <script src="curriculum.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

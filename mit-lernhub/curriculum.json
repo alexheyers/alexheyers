@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "title": "MIT Lernhub",
+    "subtitle": "KI & Agentic Coding — kostenloses MIT-Wissen, strukturiert",
+    "notionDb": "https://app.notion.com/p/e5e8d37035af440284bf5a774c53e174",
+    "notionPlan": "https://app.notion.com/p/378066d22c8e81db8b12c3fdc454f1d4",
+    "weeks": 12
+  },
+  "module": {
+    "M1": "Creative Foundations",
+    "M2": "Technical Foundations",
+    "M3": "Prompt Engineering",
+    "M4": "System Flow & Automation",
+    "M5": "Agentic AI Engineering"
+  },
+  "fields": [
+    {
+      "id": "tooling",
+      "icon": "⌨️",
+      "lernfeld": "Shell, Git & Dev-Tooling",
+      "kategorie": "Programmierung & CS",
+      "kurs": "MIT — The Missing Semester of Your CS Education",
+      "quelle": "https://missing.csail.mit.edu/",
+      "level": "Grundlagen",
+      "modul": "M2",
+      "aufwand": 12,
+      "woche": 1,
+      "summary": "Das Handwerkszeug, das in keiner Vorlesung steht — aber jeder Vibe Coder täglich braucht.",
+      "bullets": [
+        "Shell & Kommandozeile souverän bedienen",
+        "Git richtig verstehen (nicht nur auswendig)",
+        "Debugging, Profiling & Automatisierung",
+        "Datenverarbeitung mit CLI-Tools (grep, sed, awk)"
+      ],
+      "why": "Claude Code, Docker, Deploys — alles läuft im Terminal. Diese Basics machen dich 10x schneller."
+    },
+    {
+      "id": "python",
+      "icon": "🐍",
+      "lernfeld": "Informatik & Programmieren mit Python",
+      "kategorie": "Programmierung & CS",
+      "kurs": "MIT 6.0001 / 6.0002 — Introduction to CS and Programming in Python",
+      "quelle": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+      "level": "Grundlagen",
+      "modul": "M2",
+      "aufwand": 30,
+      "woche": 2,
+      "summary": "MITs legendärer Einstieg in echtes Programmieren mit Python.",
+      "bullets": [
+        "Python von Null: Variablen, Schleifen, Funktionen",
+        "Datenstrukturen, Rekursion, OOP",
+        "Algorithmisches Denken & Komplexität",
+        "Daten visualisieren"
+      ],
+      "why": "Python ist die Sprache von KI, FastAPI und Automatisierung. Hier wird aus „Prompten“ echtes Verstehen."
+    },
+    {
+      "id": "algorithms",
+      "icon": "🧩",
+      "lernfeld": "Algorithmen & Datenstrukturen",
+      "kategorie": "Programmierung & CS",
+      "kurs": "MIT 6.006 — Introduction to Algorithms",
+      "quelle": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+      "level": "Mittel",
+      "modul": "M2",
+      "aufwand": 30,
+      "woche": 4,
+      "summary": "Wie man Probleme effizient löst — die Denkweise hinter gutem Code.",
+      "bullets": [
+        "Sortier- & Suchalgorithmen, Hashing",
+        "Graphen (BFS, DFS, kürzeste Wege)",
+        "Dynamische Programmierung",
+        "Komplexität wirklich einschätzen"
+      ],
+      "why": "KI generiert Code — du musst beurteilen können, ob er skaliert. Das trennt Prototyp von Produkt."
+    },
+    {
+      "id": "linalg",
+      "icon": "📐",
+      "lernfeld": "Lineare Algebra",
+      "kategorie": "Mathematik-Grundlagen",
+      "kurs": "MIT 18.06 — Linear Algebra (Gilbert Strang)",
+      "quelle": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
+      "level": "Grundlagen",
+      "modul": "M2",
+      "aufwand": 30,
+      "woche": 3,
+      "summary": "Gilbert Strangs weltberühmter Kurs — die Mathematik hinter jeder KI.",
+      "bullets": [
+        "Vektoren, Matrizen & Matrix-Operationen",
+        "Vektorräume & lineare Gleichungssysteme",
+        "Eigenwerte & Eigenvektoren, SVD"
+      ],
+      "why": "Neuronale Netze SIND lineare Algebra. Wer Embeddings & Transformer verstehen will, beginnt hier."
+    },
+    {
+      "id": "matrix-methods",
+      "icon": "🔢",
+      "lernfeld": "Matrix Methods in Data Analysis",
+      "kategorie": "Mathematik-Grundlagen",
+      "kurs": "MIT 18.065 — Matrix Methods in Data Analysis, Signal Processing & ML (Strang)",
+      "quelle": "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/",
+      "level": "Mittel",
+      "modul": "M2",
+      "aufwand": 24,
+      "woche": 4,
+      "summary": "Strangs Fortsetzung: die Mathematik, die ML wirklich antreibt.",
+      "bullets": [
+        "Singulärwertzerlegung (SVD) & PCA",
+        "Gradientenabstieg & Optimierung",
+        "Backpropagation mathematisch verstehen"
+      ],
+      "why": "Die Brücke zwischen reiner Mathe und Deep Learning. Macht aus „Black Box“ ein nachvollziehbares System."
+    },
+    {
+      "id": "ai-6034",
+      "icon": "🧠",
+      "lernfeld": "Künstliche Intelligenz (Grundlagen)",
+      "kategorie": "Künstliche Intelligenz",
+      "kurs": "MIT 6.034 — Artificial Intelligence (Patrick Winston)",
+      "quelle": "https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/",
+      "level": "Mittel",
+      "modul": "M1",
+      "aufwand": 36,
+      "woche": 5,
+      "summary": "Patrick Winstons Klassiker — wie Maschinen „denken“, von der Suche bis zum Lernen.",
+      "bullets": [
+        "Suchverfahren & Constraint-Propagation",
+        "Logik, Schlussfolgern & Wissensrepräsentation",
+        "Grundlagen des maschinellen Lernens",
+        "Wie KI-Konzepte historisch zusammenhängen"
+      ],
+      "why": "Gibt dir das mentale Modell von KI — unbezahlbar, wenn du Agenten-Systeme entwirfst."
+    },
+    {
+      "id": "ml-6036",
+      "icon": "📊",
+      "lernfeld": "Einführung in Machine Learning",
+      "kategorie": "Machine Learning",
+      "kurs": "MIT 6.036 — Introduction to Machine Learning",
+      "quelle": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/course/",
+      "level": "Mittel",
+      "modul": "M3",
+      "aufwand": 36,
+      "woche": 6,
+      "summary": "MITs systematischer ML-Kurs — mit interaktiven Übungen in der Open Learning Library.",
+      "bullets": [
+        "Klassifikation & Regression",
+        "Overfitting, Generalisierung, Regularisierung",
+        "Neuronale Netze von Grund auf",
+        "Einführung Reinforcement Learning"
+      ],
+      "why": "Das Vokabular & die Intuition, um KI-Features bewusst statt zufällig zu bauen."
+    },
+    {
+      "id": "dl-6s191",
+      "icon": "🔥",
+      "lernfeld": "Introduction to Deep Learning",
+      "kategorie": "Deep Learning",
+      "kurs": "MIT 6.S191 — Introduction to Deep Learning",
+      "quelle": "https://introtodeeplearning.com/",
+      "level": "Mittel",
+      "modul": "M3",
+      "aufwand": 20,
+      "woche": 7,
+      "summary": "MITs meistbesuchter Deep-Learning-Kurs — praktisch & aktuell, mit Colab-Labs.",
+      "bullets": [
+        "Neuronale Netze & Backpropagation",
+        "CNNs (Vision), RNNs & Transformer (Sprache)",
+        "Generative KI & große Sprachmodelle",
+        "Labs: Musikgenerierung, Computer Vision, LLMs"
+      ],
+      "why": "Die direkteste Brücke zu dem, womit du täglich baust: LLMs & generative KI."
+    },
+    {
+      "id": "tinyml-6594",
+      "icon": "⚡",
+      "lernfeld": "TinyML & Efficient Deep Learning",
+      "kategorie": "Deep Learning",
+      "kurs": "MIT 6.5940 — TinyML and Efficient Deep Learning Computing (Song Han)",
+      "quelle": "https://hanlab.mit.edu/courses/2024-fall-65940",
+      "level": "Fortgeschritten",
+      "modul": "M5",
+      "aufwand": 30,
+      "woche": 11,
+      "summary": "Song Hans Kurs: wie man große Modelle klein & schnell macht — bis zu LLMs auf dem eigenen Laptop.",
+      "bullets": [
+        "Modell-Kompression: Pruning & Quantisierung",
+        "Neural Architecture Search, verteiltes Training",
+        "On-Device Fine-Tuning",
+        "LLMs (z. B. Llama) lokal deployen"
+      ],
+      "why": "Kosten & Latenz entscheiden über echte Produkte. Effizienz ist dein Wettbewerbsvorteil."
+    },
+    {
+      "id": "nlp-6864",
+      "icon": "💬",
+      "lernfeld": "Advanced Natural Language Processing",
+      "kategorie": "NLP & LLMs",
+      "kurs": "MIT 6.864 — Advanced Natural Language Processing",
+      "quelle": "https://ocw.mit.edu/courses/6-864-advanced-natural-language-processing-fall-2005/",
+      "level": "Fortgeschritten",
+      "modul": "M3",
+      "aufwand": 24,
+      "woche": 8,
+      "summary": "Wie Maschinen Sprache verarbeiten — die Wurzeln dessen, was heute LLM heißt.",
+      "bullets": [
+        "Syntax-, Semantik- & Diskursmodelle",
+        "Sprachmodelle & sequenzielle Modelle (HMM, PCFG)",
+        "Maschinelle Übersetzung & Generierung"
+      ],
+      "why": "Verstehst du NLP-Grundlagen, verstehst du, warum LLMs halluzinieren — und wie du gegensteuerst."
+    },
+    {
+      "id": "llm",
+      "icon": "🤖",
+      "lernfeld": "Large Language Models & Generative AI",
+      "kategorie": "NLP & LLMs",
+      "kurs": "MIT 6.S191 — LLM & Generative AI Lectures",
+      "quelle": "https://introtodeeplearning.com/",
+      "level": "Mittel",
+      "modul": "M3",
+      "aufwand": 16,
+      "woche": 8,
+      "summary": "Was unter der Haube von ChatGPT, Claude & Co. passiert.",
+      "bullets": [
+        "Transformer & Attention-Mechanismus",
+        "Tokenisierung & Embeddings",
+        "Pre-Training vs. Fine-Tuning",
+        "Stärken, Grenzen & Halluzinationen von LLMs"
+      ],
+      "why": "Du nutzt LLMs täglich — dieses Wissen macht dich vom User zum Architekten."
+    },
+    {
+      "id": "prompt",
+      "icon": "🎯",
+      "lernfeld": "Prompt Engineering Foundations",
+      "kategorie": "Prompt Engineering",
+      "kurs": "Kuratiert (MIT-nah + Praxis)",
+      "quelle": "https://www.promptingguide.ai/",
+      "level": "Grundlagen",
+      "modul": "M3",
+      "aufwand": 8,
+      "woche": 9,
+      "summary": "Die Kunst, mit Sprache präzise Ergebnisse aus KI zu holen.",
+      "bullets": [
+        "Zero-Shot, Few-Shot & Chain-of-Thought",
+        "Rollen, Struktur & Output-Formatierung",
+        "Prompts systematisch testen & evaluieren",
+        "Typische Fehlerquellen vermeiden"
+      ],
+      "why": "Kernkompetenz von Modul 3 — gute Prompts sind der Unterschied zwischen Spielerei und Produkt."
+    },
+    {
+      "id": "rag",
+      "icon": "📚",
+      "lernfeld": "Retrieval-Augmented Generation (RAG)",
+      "kategorie": "Agentic AI",
+      "kurs": "Kuratiert (MIT-nah + Praxis)",
+      "quelle": "https://www.promptingguide.ai/techniques/rag",
+      "level": "Mittel",
+      "modul": "M4",
+      "aufwand": 10,
+      "woche": 9,
+      "summary": "Wie KI Zugriff auf dein Wissen bekommt — ohne neu zu trainieren.",
+      "bullets": [
+        "Embeddings & Vektor-Datenbanken (Supabase pgvector)",
+        "Chunking & Kontext-Injektion",
+        "Grounding gegen Halluzinationen",
+        "Retrieval-Pipelines bauen"
+      ],
+      "why": "RAG ist das Herz fast jeder ernsthaften KI-App — inklusive deiner Beratungssysteme."
+    },
+    {
+      "id": "agents",
+      "icon": "🕹️",
+      "lernfeld": "AI Agents & Agentic Reasoning",
+      "kategorie": "Agentic AI",
+      "kurs": "Kuratiert (MIT-nah + Praxis)",
+      "quelle": "https://www.promptingguide.ai/research/llm-agents",
+      "level": "Fortgeschritten",
+      "modul": "M5",
+      "aufwand": 16,
+      "woche": 10,
+      "summary": "Von der Antwort-Maschine zum handelnden System — das Herz von Agentic AI.",
+      "bullets": [
+        "ReAct: Reasoning + Acting",
+        "Planung, Reflexion & Selbstkorrektur",
+        "Gedächtnis (kurz- & langfristig)",
+        "Autonome Aufgaben-Schleifen"
+      ],
+      "why": "Genau das Thema von Modul 5 — und die Basis deines AI-Adoption-Studios."
+    },
+    {
+      "id": "tooluse",
+      "icon": "🔧",
+      "lernfeld": "Tool Use & Function Calling",
+      "kategorie": "Agentic AI",
+      "kurs": "Kuratiert (MIT-nah + Praxis)",
+      "quelle": "https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview",
+      "level": "Mittel",
+      "modul": "M5",
+      "aufwand": 10,
+      "woche": 10,
+      "summary": "Wie Agenten echte Aktionen auslösen — APIs, Datenbanken, Tools.",
+      "bullets": [
+        "Tools & Funktionen für LLMs definieren",
+        "Strukturierte Outputs (JSON-Schema)",
+        "Model Context Protocol (MCP)",
+        "Die Agent-Tool-Schleife"
+      ],
+      "why": "Tool Use verbindet KI mit deiner Supabase-, n8n- und FastAPI-Welt."
+    },
+    {
+      "id": "claude-code",
+      "icon": "💻",
+      "lernfeld": "Agentic Coding mit Claude Code",
+      "kategorie": "Agentic AI",
+      "kurs": "Kuratiert · Praxis",
+      "quelle": "https://docs.claude.com/en/docs/claude-code/overview",
+      "level": "Mittel",
+      "modul": "M5",
+      "aufwand": 10,
+      "woche": 10,
+      "summary": "Software bauen mit KI-Agenten direkt im Terminal — dein tägliches Handwerk.",
+      "bullets": [
+        "Aufgaben planen & in Schritte zerlegen",
+        "Agenten Tools, Tests & Codebasen nutzen lassen",
+        "Iterieren, Reviewen & Deployen mit KI",
+        "Wann man dem Agenten vertraut — und wann nicht"
+      ],
+      "why": "Das ist Vibe Coding in Reinform — von der Idee bis zum Deploy."
+    },
+    {
+      "id": "multiagent",
+      "icon": "🕸️",
+      "lernfeld": "Multi-Agent Systems & Orchestrierung",
+      "kategorie": "Agentic AI",
+      "kurs": "Kuratiert · Anwendung: AI-Adoption-Studio",
+      "quelle": "https://www.anthropic.com/engineering/building-effective-agents",
+      "level": "Fortgeschritten",
+      "modul": "M5",
+      "aufwand": 14,
+      "woche": 11,
+      "summary": "Wenn ein Agent nicht reicht: mehrere Agenten orchestrieren.",
+      "bullets": [
+        "Orchestrator-Worker-Muster",
+        "Parallele Agenten & Hand-offs",
+        "Wann Multi-Agent sinnvoll ist (und wann nicht)",
+        "Zuverlässigkeit & Fehlerbehandlung"
+      ],
+      "why": "Direkt anwendbar auf dein 8-Agent-System im AI-Adoption-Studio — Final-Pitch 21.07.2026."
+    },
+    {
+      "id": "slt-9520",
+      "icon": "📈",
+      "lernfeld": "Statistical Learning Theory",
+      "kategorie": "Machine Learning",
+      "kurs": "MIT 9.520 — Statistical Learning Theory and Applications",
+      "quelle": "https://ocw.mit.edu/courses/9-520-statistical-learning-theory-and-applications-spring-2006/",
+      "level": "Fortgeschritten",
+      "modul": "M5",
+      "aufwand": 24,
+      "woche": 12,
+      "summary": "Die Theorie dahinter: Warum lernen Maschinen überhaupt zuverlässig?",
+      "bullets": [
+        "Regularisierung & Kernel-Methoden",
+        "Generalisierung & Bias-Varianz",
+        "Mathematische Garantien hinter ML"
+      ],
+      "why": "Vertiefung für alle, die KI nicht nur nutzen, sondern wirklich durchdringen wollen."
+    },
+    {
+      "id": "ml-health",
+      "icon": "🩺",
+      "lernfeld": "Machine Learning for Healthcare",
+      "kategorie": "Machine Learning",
+      "kurs": "MIT 6.S897 — Machine Learning for Healthcare",
+      "quelle": "https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/",
+      "level": "Fortgeschritten",
+      "modul": "M5",
+      "aufwand": 20,
+      "woche": 12,
+      "summary": "ML auf echten, sensiblen Daten — ein Modell für KI in regulierten Branchen.",
+      "bullets": [
+        "ML-Pipelines auf realen Domain-Daten",
+        "Risiko, Fairness & Interpretierbarkeit",
+        "NLP auf unstrukturierten Texten",
+        "Verantwortungsvoller KI-Einsatz"
+      ],
+      "why": "Übertragbar auf Hospitality & KMU: KI dort einsetzen, wo Daten heikel und Vertrauen entscheidend ist."
+    }
+  ]
+}
