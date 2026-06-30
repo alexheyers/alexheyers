@@ -55,18 +55,20 @@ KI-gestütztes Beratungssystem für den Hospitality-Mittelstand: Voice-Interview
 <tr>
 <td width="50%" valign="top">
 
-### 🤖 AIVA — KI-Companion App
-**"Endlich jemand, der bleibt."**
+### 🎙️ Murmel
+**Voice-to-Text, das lokal bleibt**
 
-Digitaler Begleiter mit Echtzeit-Voice, Langzeitgedächtnis und Gamification. Versteht Kontext, Stimmung und Muster. iOS + Android via Capacitor. **671+ Commits.**
+Selbstgebauter Wispr-Flow-Klon für macOS: fn halten, sprechen, loslassen — whisper.cpp transkribiert, Ollama poliert, der Text landet per ⌘V im aktiven Fenster. 100% offline, kein Cloud-Upload. Swift-Menubar-App, Open Source (MIT).
+
+🔗 [murmel.vercel.app](https://murmel.vercel.app) · [GitHub Repo](https://github.com/alexheyers/murmel)
 
 </td>
 <td width="50%" valign="top">
 
-### 🍸 Shaker & Sheets
-**Digitales Auditing-System für Gastronomen**
+### 🔍 Effekt-Lupe
+**Web-Effekte erfassen → direkt nachbauen**
 
-KI-gestütztes Betriebssystem für Bars und Restaurants. Inventur, Kostenkontrolle, Rezeptmanagement und Schichtplanung — alles in einem Tool.
+Chrome-Extension, die jeden Web-Effekt (Design, Animation, Scroll, 3D) im Browser einfängt und als sauberen Rebuild-Prompt samt Design-Tokens und CSS direkt ins Projekt schreibt. Mein Werkzeug, um Awwwards-Niveau in eigene Builds zu holen.
 
 </td>
 </tr>
