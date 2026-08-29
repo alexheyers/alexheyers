@@ -34,6 +34,10 @@ window.CURRICULUM = {
       summary: "Das Handwerkszeug, das in keiner Vorlesung steht — aber jeder Vibe Coder täglich braucht.",
       bullets: ["Shell & Kommandozeile souverän bedienen", "Git richtig verstehen (nicht nur auswendig)", "Debugging, Profiling & Automatisierung", "Datenverarbeitung mit CLI-Tools (grep, sed, awk)"],
       why: "Claude Code, Docker, Deploys — alles läuft im Terminal. Diese Basics machen dich 10x schneller.",
+      resources: [
+        { l: "🎥 Video-Lektionen", u: "https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J" },
+        { l: "📄 Alle Lektionen + Notizen", u: "https://missing.csail.mit.edu/2020/" },
+      ],
     },
     {
       id: "python",
@@ -49,6 +53,10 @@ window.CURRICULUM = {
       summary: "MITs legendärer Einstieg in echtes Programmieren mit Python.",
       bullets: ["Python von Null: Variablen, Schleifen, Funktionen", "Datenstrukturen, Rekursion, OOP", "Algorithmisches Denken & Komplexität", "Daten visualisieren"],
       why: "Python ist die Sprache von KI, FastAPI und Automatisierung. Hier wird aus „Prompten“ echtes Verstehen.",
+      resources: [
+        { l: "🎥 24 Vorlesungen (YouTube)", u: "https://www.youtube.com/playlist?list=PLUl4u3cNGP63WbdFxL8giv4yhgdMGaZNA" },
+        { l: "📄 Videos + Folien (OCW)", u: "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/" },
+      ],
     },
     {
       id: "algorithms",
@@ -64,6 +72,10 @@ window.CURRICULUM = {
       summary: "Wie man Probleme effizient löst — die Denkweise hinter gutem Code.",
       bullets: ["Sortier- & Suchalgorithmen, Hashing", "Graphen (BFS, DFS, kürzeste Wege)", "Dynamische Programmierung", "Komplexität wirklich einschätzen"],
       why: "KI generiert Code — du musst beurteilen können, ob er skaliert. Das trennt Prototyp von Produkt.",
+      resources: [
+        { l: "🎥 Vorlesungen (YouTube)", u: "https://www.youtube.com/playlist?list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY" },
+        { l: "📄 Videos + Aufgaben (OCW)", u: "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/" },
+      ],
     },
     {
       id: "linalg",
@@ -79,6 +91,10 @@ window.CURRICULUM = {
       summary: "Gilbert Strangs weltberühmter Kurs — die Mathematik hinter jeder KI.",
       bullets: ["Vektoren, Matrizen & Matrix-Operationen", "Vektorräume & lineare Gleichungssysteme", "Eigenwerte & Eigenvektoren, SVD"],
       why: "Neuronale Netze SIND lineare Algebra. Wer Embeddings & Transformer verstehen will, beginnt hier.",
+      resources: [
+        { l: "🎥 Strang-Vorlesungen (YouTube)", u: "https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8" },
+        { l: "📄 Video-Lectures (OCW)", u: "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/" },
+      ],
     },
     {
       id: "matrix-methods",
@@ -94,6 +110,9 @@ window.CURRICULUM = {
       summary: "Strangs Fortsetzung: die Mathematik, die ML wirklich antreibt.",
       bullets: ["Singulärwertzerlegung (SVD) & PCA", "Gradientenabstieg & Optimierung", "Backpropagation mathematisch verstehen"],
       why: "Die Brücke zwischen reiner Mathe und Deep Learning. Macht aus „Black Box“ ein nachvollziehbares System.",
+      resources: [
+        { l: "📄 Video-Lectures (OCW)", u: "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/video_galleries/video-lectures/" },
+      ],
     },
     {
       id: "ai-6034",
@@ -109,6 +128,10 @@ window.CURRICULUM = {
       summary: "Patrick Winstons Klassiker — wie Maschinen „denken“, von der Suche bis zum Lernen.",
       bullets: ["Suchverfahren & Constraint-Propagation", "Logik, Schlussfolgern & Wissensrepräsentation", "Grundlagen des maschinellen Lernens", "Wie KI-Konzepte historisch zusammenhängen"],
       why: "Gibt dir das mentale Modell von KI — unbezahlbar, wenn du Agenten-Systeme entwirfst.",
+      resources: [
+        { l: "🎥 Winston-Vorlesungen (YouTube)", u: "https://www.youtube.com/playlist?list=PLUl4u3cNGP63gFHB6xb-kVBiQHYe_4hSi" },
+        { l: "📄 Lecture Videos (OCW)", u: "https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/video_galleries/lecture-videos/" },
+      ],
     },
     {
       id: "ml-6036",
@@ -124,6 +147,9 @@ window.CURRICULUM = {
       summary: "MITs systematischer ML-Kurs — mit interaktiven Übungen in der Open Learning Library.",
       bullets: ["Klassifikation & Regression", "Overfitting, Generalisierung, Regularisierung", "Neuronale Netze von Grund auf", "Einführung Reinforcement Learning"],
       why: "Das Vokabular & die Intuition, um KI-Features bewusst statt zufällig zu bauen.",
+      resources: [
+        { l: "🧪 Interaktiver Kurs + Übungen", u: "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/course/" },
+      ],
     },
     {
       id: "dl-6s191",
@@ -139,6 +165,10 @@ window.CURRICULUM = {
       summary: "MITs meistbesuchter Deep-Learning-Kurs — praktisch & aktuell, mit Colab-Labs.",
       bullets: ["Neuronale Netze & Backpropagation", "CNNs (Vision), RNNs & Transformer (Sprache)", "Generative KI & große Sprachmodelle", "Labs: Musikgenerierung, Computer Vision, LLMs"],
       why: "Die direkteste Brücke zu dem, womit du täglich baust: LLMs & generative KI.",
+      resources: [
+        { l: "🎥 Alle Vorlesungen (YouTube)", u: "https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" },
+        { l: "🧪 Labs in Colab (GitHub)", u: "https://github.com/MITDeepLearning/introtodeeplearning" },
+      ],
     },
     {
       id: "tinyml-6594",
@@ -154,6 +184,9 @@ window.CURRICULUM = {
       summary: "Song Hans Kurs: wie man große Modelle klein & schnell macht — bis zu LLMs auf dem eigenen Laptop.",
       bullets: ["Modell-Kompression: Pruning & Quantisierung", "Neural Architecture Search, verteiltes Training", "On-Device Fine-Tuning", "LLMs (z. B. Llama) lokal deployen"],
       why: "Kosten & Latenz entscheiden über echte Produkte. Effizienz ist dein Wettbewerbsvorteil.",
+      resources: [
+        { l: "🎥 EfficientML-Vorlesungen (YouTube)", u: "https://www.youtube.com/playlist?list=PL80kAHvQbh-pT4lCkDT53zT8DKmhE0idB" },
+      ],
     },
     {
       id: "nlp-6864",
@@ -169,6 +202,9 @@ window.CURRICULUM = {
       summary: "Wie Maschinen Sprache verarbeiten — die Wurzeln dessen, was heute LLM heißt.",
       bullets: ["Syntax-, Semantik- & Diskursmodelle", "Sprachmodelle & sequenzielle Modelle (HMM, PCFG)", "Maschinelle Übersetzung & Generierung"],
       why: "Verstehst du NLP-Grundlagen, verstehst du, warum LLMs halluzinieren — und wie du gegensteuerst.",
+      resources: [
+        { l: "📄 Lecture Notes (OCW)", u: "https://ocw.mit.edu/courses/6-864-advanced-natural-language-processing-fall-2005/pages/lecture-notes/" },
+      ],
     },
     {
       id: "llm",
@@ -184,6 +220,10 @@ window.CURRICULUM = {
       summary: "Was unter der Haube von ChatGPT, Claude & Co. passiert.",
       bullets: ["Transformer & Attention-Mechanismus", "Tokenisierung & Embeddings", "Pre-Training vs. Fine-Tuning", "Stärken, Grenzen & Halluzinationen von LLMs"],
       why: "Du nutzt LLMs täglich — dieses Wissen macht dich vom User zum Architekten.",
+      resources: [
+        { l: "🎥 6.S191 Vorlesungen (YouTube)", u: "https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" },
+        { l: "📄 Transformer erklärt (Anthropic)", u: "https://www.anthropic.com/research/mapping-mind-language-model" },
+      ],
     },
     {
       id: "prompt",
@@ -199,6 +239,10 @@ window.CURRICULUM = {
       summary: "Die Kunst, mit Sprache präzise Ergebnisse aus KI zu holen.",
       bullets: ["Zero-Shot, Few-Shot & Chain-of-Thought", "Rollen, Struktur & Output-Formatierung", "Prompts systematisch testen & evaluieren", "Typische Fehlerquellen vermeiden"],
       why: "Kernkompetenz von Modul 3 — gute Prompts sind der Unterschied zwischen Spielerei und Produkt.",
+      resources: [
+        { l: "📄 Prompt Engineering Guide", u: "https://www.promptingguide.ai/" },
+        { l: "📄 Prompting (Claude Docs)", u: "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" },
+      ],
     },
     {
       id: "rag",
@@ -214,6 +258,10 @@ window.CURRICULUM = {
       summary: "Wie KI Zugriff auf dein Wissen bekommt — ohne neu zu trainieren.",
       bullets: ["Embeddings & Vektor-Datenbanken (Supabase pgvector)", "Chunking & Kontext-Injektion", "Grounding gegen Halluzinationen", "Retrieval-Pipelines bauen"],
       why: "RAG ist das Herz fast jeder ernsthaften KI-App — inklusive deiner Beratungssysteme.",
+      resources: [
+        { l: "📄 RAG-Techniken (Guide)", u: "https://www.promptingguide.ai/techniques/rag" },
+        { l: "🧪 RAG mit Supabase (pgvector)", u: "https://supabase.com/docs/guides/ai" },
+      ],
     },
     {
       id: "agents",
@@ -229,6 +277,10 @@ window.CURRICULUM = {
       summary: "Von der Antwort-Maschine zum handelnden System — das Herz von Agentic AI.",
       bullets: ["ReAct: Reasoning + Acting", "Planung, Reflexion & Selbstkorrektur", "Gedächtnis (kurz- & langfristig)", "Autonome Aufgaben-Schleifen"],
       why: "Genau das Thema von Modul 5 — und die Basis deines AI-Adoption-Studios.",
+      resources: [
+        { l: "📄 LLM Agents (Guide)", u: "https://www.promptingguide.ai/research/llm-agents" },
+        { l: "📄 Building Effective Agents (Anthropic)", u: "https://www.anthropic.com/engineering/building-effective-agents" },
+      ],
     },
     {
       id: "tooluse",
@@ -244,6 +296,10 @@ window.CURRICULUM = {
       summary: "Wie Agenten echte Aktionen auslösen — APIs, Datenbanken, Tools.",
       bullets: ["Tools & Funktionen für LLMs definieren", "Strukturierte Outputs (JSON-Schema)", "Model Context Protocol (MCP)", "Die Agent-Tool-Schleife"],
       why: "Tool Use verbindet KI mit deiner Supabase-, n8n- und FastAPI-Welt.",
+      resources: [
+        { l: "📄 Tool Use (Claude Docs)", u: "https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview" },
+        { l: "📄 Model Context Protocol (MCP)", u: "https://modelcontextprotocol.io/" },
+      ],
     },
     {
       id: "claude-code",
@@ -259,6 +315,10 @@ window.CURRICULUM = {
       summary: "Software bauen mit KI-Agenten direkt im Terminal — dein tägliches Handwerk.",
       bullets: ["Aufgaben planen & in Schritte zerlegen", "Agenten Tools, Tests & Codebasen nutzen lassen", "Iterieren, Reviewen & Deployen mit KI", "Wann man dem Agenten vertraut — und wann nicht"],
       why: "Das ist Vibe Coding in Reinform — von der Idee bis zum Deploy.",
+      resources: [
+        { l: "📄 Claude Code Übersicht", u: "https://docs.claude.com/en/docs/claude-code/overview" },
+        { l: "🧪 Quickstart", u: "https://docs.claude.com/en/docs/claude-code/quickstart" },
+      ],
     },
     {
       id: "multiagent",
@@ -274,6 +334,10 @@ window.CURRICULUM = {
       summary: "Wenn ein Agent nicht reicht: mehrere Agenten orchestrieren.",
       bullets: ["Orchestrator-Worker-Muster", "Parallele Agenten & Hand-offs", "Wann Multi-Agent sinnvoll ist (und wann nicht)", "Zuverlässigkeit & Fehlerbehandlung"],
       why: "Direkt anwendbar auf dein 8-Agent-System im AI-Adoption-Studio — Final-Pitch 21.07.2026.",
+      resources: [
+        { l: "📄 Building Effective Agents", u: "https://www.anthropic.com/engineering/building-effective-agents" },
+        { l: "📄 Multi-Agent Research System", u: "https://www.anthropic.com/engineering/multi-agent-research-system" },
+      ],
     },
     {
       id: "slt-9520",
@@ -289,6 +353,9 @@ window.CURRICULUM = {
       summary: "Die Theorie dahinter: Warum lernen Maschinen überhaupt zuverlässig?",
       bullets: ["Regularisierung & Kernel-Methoden", "Generalisierung & Bias-Varianz", "Mathematische Garantien hinter ML"],
       why: "Vertiefung für alle, die KI nicht nur nutzen, sondern wirklich durchdringen wollen.",
+      resources: [
+        { l: "📄 Kurs-Materialien (OCW)", u: "https://ocw.mit.edu/courses/9-520-statistical-learning-theory-and-applications-spring-2006/pages/lecture-notes/" },
+      ],
     },
     {
       id: "ml-health",
@@ -304,6 +371,9 @@ window.CURRICULUM = {
       summary: "ML auf echten, sensiblen Daten — ein Modell für KI in regulierten Branchen.",
       bullets: ["ML-Pipelines auf realen Domain-Daten", "Risiko, Fairness & Interpretierbarkeit", "NLP auf unstrukturierten Texten", "Verantwortungsvoller KI-Einsatz"],
       why: "Übertragbar auf Hospitality & KMU: KI dort einsetzen, wo Daten heikel und Vertrauen entscheidend ist.",
+      resources: [
+        { l: "🎥 Vorlesungen (Internet Archive)", u: "https://archive.org/details/MIT6.S897S19" },
+      ],
     },
   ],
 };
